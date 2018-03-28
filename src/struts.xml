@@ -9,11 +9,16 @@
 	<!-- 禁止动态方法调用 -->
 	<!-- <constant name="struts.enable.DynamicMethodInvocation" value="false"></constant> -->
 	<constant name="struts.multipart.maxSize" value="10701096"></constant>
-	<package name="upload" namespace="/upload" extends="struts-default">
-		<action name="list_*" class="ren.draven.action.UploadAction" method="{1}">
+	<package name="uploads" namespace="/uploads" extends="struts-default">
+		<action name="list_*" class="ren.draven.action.UploadsAction" method="{1}">
 			<result name="success">/WEB-INF/page/message.jsp</result>
 		</action>
 	</package>
+<!-- 	<package name="upload" namespace="/upload" extends="struts-default">
+		<action name="list_*" class="ren.draven.action.UploadAction" method="{1}">
+			<result name="success">/WEB-INF/page/message.jsp</result>
+		</action>
+	</package> -->
 <!-- 	<package name="person" namespace="/person" extends="struts-default">
 		<action name="manage" class="ren.draven.action.HelloWorldAction" method="execute">
 			<result name="message">/WEB-INF/page/hello.jsp</result>
