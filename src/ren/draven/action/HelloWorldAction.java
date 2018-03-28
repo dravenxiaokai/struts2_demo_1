@@ -3,6 +3,8 @@ package ren.draven.action;
 import java.net.URLEncoder;
 import java.util.Date;
 
+import com.opensymphony.xwork2.ActionContext;
+
 import ren.draven.bean.Person;
 
 public class HelloWorldAction {// ?id=23&name=xxx
@@ -57,11 +59,18 @@ public class HelloWorldAction {// ?id=23&name=xxx
 		return "success";
 	}
 
+	
 	public String execute() throws Exception {
 		// this.msg = "我的第一个struts应用";
 		// this.userName = URLEncoder.encode("传智播客","UTF-8");
+		
+		ActionContext ctx = ActionContext.getContext();
+		ctx.getApplication().put("app", "应用范围");//往ServletContext里放app
+		ctx.getSession().put("ses", "session范围");//往session里面放ses
+		ctx.put("req", "request范围");
 
-		return "success";
+		return "message";
+//		return "success";
 	}
 
 	// public String getUserName() {

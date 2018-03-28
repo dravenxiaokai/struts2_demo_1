@@ -8,11 +8,16 @@
 	<constant name="struts.action.extension" value="do,action"></constant>
 	<!-- 禁止动态方法调用 -->
 	<constant name="struts.enable.DynamicMethodInvocation" value="false"></constant>
-	<package name="employee" namespace="/control/employee" extends="struts-default">
+	<package name="person" namespace="/person" extends="struts-default">
+		<action name="manage" class="ren.draven.action.HelloWorldAction" method="execute">
+			<result name="message">/WEB-INF/page/hello.jsp</result>
+		</action>
+	</package>
+	<!-- <package name="employee" namespace="/control/employee" extends="struts-default">
 		<action name="list_*" class="ren.draven.action.HelloWorldAction" method="{1}">
 			<result name="success">/WEB-INF/page/message.jsp</result>
 		</action>
-	</package>
+	</package> -->
 <!-- 	<package name="base" extends="struts-default">
 		<global-results>
 			<result name="message">/WEB-INF/page/message.jsp</result>

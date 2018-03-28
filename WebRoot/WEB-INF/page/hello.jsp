@@ -8,7 +8,8 @@
 <title>hello</title>
 </head>
 <body>
-${message },欢迎你
-<%=new Date() %>
+${applicationScope.app }<br>
+${sessionScope.ses }<br>
+${requestScope.req }<br>
 </body>
 </html>
