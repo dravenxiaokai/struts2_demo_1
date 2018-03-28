@@ -12,7 +12,22 @@
 		<result type="redirect">/employeeAdd.jsp</result>
 	</action>
 	<action name="redirectAction">
-		<result type="redirectAction">list</result>
+		<result type="redirectAction">
+			<param name="actionName">xxx</param>
+			<param name="namespace">/control/department</param>
+		</result>
+	</action>
+	
+	<action name="plainText">
+		<result type="plainText">
+			<param name="location">/index.jsp</param>
+			<param name="charSet">UTF-8</param>
+		</result>
+	</action>
+</package>
+<package name="other" namespace="/control/department" extends="struts-default">
+	<action name="xxx">
+		<result>/WEB-INF/page/hello.jsp</result>
 	</action>
 </package>
 </struts>
