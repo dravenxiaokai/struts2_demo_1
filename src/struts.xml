@@ -4,6 +4,7 @@
 	"http://struts.apache.org/dtds/struts-2.3.dtd">
 
 <struts>
+	<constant name="struts.action.extension" value="do,action"></constant>
 	<package name="base" extends="struts-default">
 		<global-results>
 			<result name="message">/WEB-INF/page/message.jsp</result>
@@ -16,8 +17,8 @@
 			</result>
 		</action>
 		<action name="show" class="ren.draven.action.HelloWorldAction">
-		<param name="savepath">/images</param>
-		<result name="success">/WEB-INF/page/message.jsp</result>
+			<param name="savepath">/images</param>
+			<result name="success">/WEB-INF/page/message.jsp</result>
 		</action>
 		<action name="manage" class="ren.draven.action.HelloWorldAction"
 			method="add">
