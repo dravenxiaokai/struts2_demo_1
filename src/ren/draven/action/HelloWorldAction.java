@@ -1,6 +1,7 @@
 package ren.draven.action;
 
 import java.net.URLEncoder;
+import java.util.Date;
 
 import ren.draven.bean.Person;
 
@@ -8,6 +9,16 @@ public class HelloWorldAction {// ?id=23&name=xxx
 	private Integer id;
 	private String name;
 	private Person person;
+	private Date birthday;
+
+	public Date getBirthday() {
+		return birthday;
+	}
+
+	public void setBirthday(Date birthday) {
+		System.out.println(birthday);
+		this.birthday = birthday;
+	}
 
 	public Person getPerson() {
 		return person;
