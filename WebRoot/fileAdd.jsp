@@ -4,12 +4,12 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>message</title>
+<title>employeeAdd</title>
 </head>
 <body>
-<%-- id=${person.id }<br>
-name=${person.name } --%>
-<%-- ${birthday } --%>
-${message }
+	<form action="${pageContext.request.contextPath }/upload/list_execute" enctype="multipart/form-data" method="post">
+		文件：<input type="file" name="image"><br>
+		<button type="submit">上传</button>
+	</form>
 </body>
 </html>
