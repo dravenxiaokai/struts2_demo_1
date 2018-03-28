@@ -5,12 +5,13 @@
 
 <struts>
 	<!-- 定义action后缀 -->
-	<constant name="struts.action.extension" value="do,action"></constant>
+	<!-- <constant name="struts.action.extension" value="do,action"></constant> -->
 	<!-- 禁止动态方法调用 -->
-	<constant name="struts.enable.DynamicMethodInvocation" value="false"></constant>
+	<!-- <constant name="struts.enable.DynamicMethodInvocation" value="false"></constant> -->
 	<package name="person" namespace="/person" extends="struts-default">
 		<action name="manage" class="ren.draven.action.HelloWorldAction" method="execute">
 			<result name="message">/WEB-INF/page/hello.jsp</result>
+			<allowed-methods>rsa</allowed-methods>
 		</action>
 	</package>
 	<!-- <package name="employee" namespace="/control/employee" extends="struts-default">

@@ -3,6 +3,12 @@ package ren.draven.action;
 import java.net.URLEncoder;
 import java.util.Date;
 
+import javax.servlet.ServletContext;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.apache.struts2.ServletActionContext;
+
 import com.opensymphony.xwork2.ActionContext;
 
 import ren.draven.bean.Person;
@@ -59,6 +65,17 @@ public class HelloWorldAction {// ?id=23&name=xxx
 		return "success";
 	}
 
+	public String rsa() throws Exception{
+		
+		HttpServletRequest request = ServletActionContext.getRequest();
+		ServletContext servletContext = ServletActionContext.getServletContext();
+		request.setAttribute("req", "请求范围属性");
+		request.getSession().setAttribute("ses", "会话范围属性");
+		servletContext.setAttribute("app", "应用范围属性");
+//		HttpServletResponse httpServletResponse = ServletActionContext.getResponse();
+		
+		return "message";
+	}
 	
 	public String execute() throws Exception {
 		// this.msg = "我的第一个struts应用";
