@@ -4,30 +4,40 @@
 	"http://struts.apache.org/dtds/struts-2.3.dtd">
 
 <struts>
-<package name="itcast" namespace="/control/employee" extends="struts-default">
-	<action name="list" class="ren.draven.action.HelloWorldAction" method="execute">
-		<result name="success" type="redirect">/employeeAdd.jsp?userName=${userName}</result>
-	</action>
-	<action name="redirect">
-		<result type="redirect">/employeeAdd.jsp</result>
-	</action>
-	<action name="redirectAction">
-		<result type="redirectAction">
-			<param name="actionName">xxx</param>
-			<param name="namespace">/control/department</param>
-		</result>
-	</action>
-	
-	<action name="plainText">
-		<result type="plainText">
-			<param name="location">/index.jsp</param>
-			<param name="charSet">UTF-8</param>
-		</result>
-	</action>
-</package>
-<package name="other" namespace="/control/department" extends="struts-default">
-	<action name="xxx">
-		<result>/WEB-INF/page/hello.jsp</result>
-	</action>
-</package>
+	<package name="base" extends="struts-default">
+		<global-results>
+			<result name="message">/WEB-INF/page/message.jsp</result>
+		</global-results>
+	</package>
+	<package name="itcast" namespace="/control/employee" extends="base">
+		<action name="list" class="ren.draven.action.HelloWorldAction"
+			method="execute">
+			<result name="success" type="redirect">/employeeAdd.jsp?userName=${userName}
+			</result>
+		</action>
+		<action name="manage" class="ren.draven.action.HelloWorldAction"
+			method="add">
+		</action>
+		<action name="redirect">
+			<result type="redirect">/employeeAdd.jsp</result>
+		</action>
+		<action name="redirectAction">
+			<result type="redirectAction">
+				<param name="actionName">xxx</param>
+				<param name="namespace">/control/department</param>
+			</result>
+		</action>
+
+		<action name="plainText">
+			<result type="plainText">
+				<param name="location">/index.jsp</param>
+				<param name="charSet">UTF-8</param>
+			</result>
+		</action>
+	</package>
+	<package name="other" namespace="/control/department" extends="base">
+		<action name="xxx">
+			<result>/WEB-INF/page/hello.jsp</result>
+		</action>
+	</package>
 </struts>

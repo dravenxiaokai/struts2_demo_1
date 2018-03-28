@@ -20,4 +20,7 @@ public class HelloWorldAction {
 		
 		return "success";
 	}
+	public String add() {
+		return "message";
+	}
 }
