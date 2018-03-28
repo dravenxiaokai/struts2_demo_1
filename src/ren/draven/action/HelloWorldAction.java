@@ -3,12 +3,13 @@ package ren.draven.action;
 import java.net.URLEncoder;
 
 public class HelloWorldAction {
+	private String msg;
+	private String userName;
+	private String savepath;
+
 	public String getUserName() {
 		return userName;
 	}
-
-	private String msg;
-	private String userName;
 
 	public String getMessage() {
 		return msg;
@@ -22,5 +23,13 @@ public class HelloWorldAction {
 	}
 	public String add() {
 		return "message";
+	}
+
+	public String getSavepath() {
+		return savepath;
+	}
+
+	public void setSavepath(String savepath) {
+		this.savepath = savepath;
 	}
 }

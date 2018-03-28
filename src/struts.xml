@@ -15,6 +15,10 @@
 			<result name="success" type="redirect">/employeeAdd.jsp?userName=${userName}
 			</result>
 		</action>
+		<action name="show" class="ren.draven.action.HelloWorldAction">
+		<param name="savepath">/images</param>
+		<result name="success">/WEB-INF/page/message.jsp</result>
+		</action>
 		<action name="manage" class="ren.draven.action.HelloWorldAction"
 			method="add">
 		</action>
@@ -27,7 +31,6 @@
 				<param name="namespace">/control/department</param>
 			</result>
 		</action>
-
 		<action name="plainText">
 			<result type="plainText">
 				<param name="location">/index.jsp</param>
