@@ -2,9 +2,20 @@ package ren.draven.action;
 
 import java.net.URLEncoder;
 
+import ren.draven.bean.Person;
+
 public class HelloWorldAction {// ?id=23&name=xxx
 	private Integer id;
 	private String name;
+	private Person person;
+
+	public Person getPerson() {
+		return person;
+	}
+
+	public void setPerson(Person person) {
+		this.person = person;
+	}
 
 	public Integer getId() {
 		return id;

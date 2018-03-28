@@ -11,8 +11,8 @@
 	<form
 		action="<%=request.getContextPath()%>/control/employee/list_execute.action"
 		method="post">
-		id:<input type="text" name="id"><br> name:<input
-			type="text" name="name"><br> <input type="submit"
+		id: <input type="text" name="person.id"><br> name:<input
+			type="text" name="person.name"><br> <input type="submit"
 			value="发送">
 	</form>
 </body>

@@ -7,7 +7,7 @@
 <title>message</title>
 </head>
 <body>
-id=${id }<br>
-name=${name }
+id=${person.id }<br>
+name=${person.name }
 </body>
 </html>
