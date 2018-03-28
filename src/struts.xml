@@ -4,8 +4,16 @@
 	"http://struts.apache.org/dtds/struts-2.3.dtd">
 
 <struts>
+	<!-- 定义action后缀 -->
 	<constant name="struts.action.extension" value="do,action"></constant>
-	<package name="base" extends="struts-default">
+	<!-- 禁止动态方法调用 -->
+	<constant name="struts.enable.DynamicMethodInvocation" value="false"></constant>
+	<package name="employee" namespace="/control/employee" extends="struts-default">
+		<action name="list_*" class="ren.draven.action.HelloWorldAction" method="{1}">
+			<result name="success">/WEB-INF/page/message.jsp</result>
+		</action>
+	</package>
+<!-- 	<package name="base" extends="struts-default">
 		<global-results>
 			<result name="message">/WEB-INF/page/message.jsp</result>
 		</global-results>
@@ -43,5 +51,5 @@
 		<action name="xxx">
 			<result>/WEB-INF/page/hello.jsp</result>
 		</action>
-	</package>
+	</package> -->
 </struts>

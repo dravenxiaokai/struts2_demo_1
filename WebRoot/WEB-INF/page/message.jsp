@@ -7,6 +7,7 @@
 <title>message</title>
 </head>
 <body>
-${savepath }
+id=${id }<br>
+name=${name }
 </body>
 </html>
