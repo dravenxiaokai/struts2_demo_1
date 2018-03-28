@@ -1,6 +1,7 @@
 package ren.draven.action;
 
 import java.net.URLEncoder;
+import java.util.Arrays;
 import java.util.Date;
 
 import javax.servlet.ServletContext;
@@ -85,6 +86,7 @@ public class HelloWorldAction {// ?id=23&name=xxx
 		ctx.getApplication().put("app", "应用范围");//往ServletContext里放app
 		ctx.getSession().put("ses", "session范围");//往session里面放ses
 		ctx.put("req", "request范围");
+		ctx.put("names", Arrays.asList("张三","李四","王五"));
 
 		return "message";
 //		return "success";
